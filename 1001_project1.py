@@ -17,6 +17,7 @@ high_popularity_rating = df_movies[high_popularity_movies].mean()
 low_popularity_rating = df_movies[low_popularity_movies].mean()
 
 t1, p1 = stats.ttest_ind(high_popularity_rating,low_popularity_rating)
+print(t1,p1)
 
 
 #2) Are movies that are newer rated differently than movies that are older? [Hint: Do a median split of year of
@@ -32,6 +33,7 @@ new_movies_rating = df_movies_col_mean.iloc[:,new_movies].mean()
 old_movies_rating = df_movies_col_mean.iloc[:,old_movies].mean()
 
 t2, p2 = stats.ttest_ind(new_movies_rating,old_movies_rating)
+print(t2,p2)
 
 
 #3) Is enjoyment of ‘Shrek (2001)’ gendered, i.e. do male and female viewers rate it differently?
@@ -42,6 +44,7 @@ male_rating_Shrek = df_movies_row_mean[df_data['Gender identity (1 = female; 2 =
 female_rating_Shrek = df_movies_row_mean[df_data['Gender identity (1 = female; 2 = male; 3 = self-described)'] == 2]['Shrek (2001)']
 
 t3, p3 = stats.ttest_ind(male_rating_Shrek, female_rating_Shrek)
+print(t3,p3)
 
 
 #4) What proportion of movies are rated differently by male and female viewers?
@@ -55,6 +58,7 @@ results = [
 ]
 t4, p4 = zip(*results)
 proportion4 = sum(1 for p in p4 if p <= 0.005) / df_male_rating.shape[1]
+print(proportion4)
 
 
 #5) Do people who are only children enjoy ‘The Lion King (1994)’ more than people with siblings?
@@ -63,6 +67,7 @@ OnlyChildren_rating_theLionKing = df_movies_row_mean[df_data['Are you an only ch
 WithSiblings_rating_theLionKing = df_movies_row_mean[df_data['Are you an only child? (1: Yes; 0: No; -1: Did not respond)'] == 0]['The Lion King (1994)']
 
 t5, p5 = stats.ttest_ind(OnlyChildren_rating_theLionKing, WithSiblings_rating_theLionKing)
+print(t5,p5)
 
 
 #6) What proportion of movies exhibit an “only child effect”, i.e. are rated different by viewers with siblings
@@ -77,6 +82,7 @@ results = [
 ]
 t6, p6 = zip(*results)
 proportion6 = sum(1 for p in p6 if p <= 0.005) / df_OnlyChildren_rating.shape[1]
+print(proportion6)
 
 
 #7) Do people who like to watch movies socially enjoy ‘The Wolf of Wall Street (2013)’ more than those who
@@ -86,6 +92,7 @@ socially_rating_WallStreet = df_movies_row_mean[df_data['Movies are best enjoyed
 alone_rating_WallStreet = df_movies_row_mean[df_data['Movies are best enjoyed alone (1: Yes; 0: No; -1: Did not respond)'] == 1]['The Wolf of Wall Street (2013)']
 
 t7, p7 = stats.ttest_ind(socially_rating_WallStreet, alone_rating_WallStreet)
+print(t7,p7)
 
 
 #8) What proportion of movies exhibit such a “social watching” effect?
@@ -99,11 +106,14 @@ results = [
 ]
 t8, p8 = zip(*results)
 proportion8 = sum(1 for p in p8 if p <= 0.005) / df_socially_rating.shape[1]
+print(proportion8)
 
 
 #9) Is the ratings distribution of ‘Home Alone (1990)’ different than that of ‘Finding Nemo (2003)’?
 
 ks = stats.ks_2samp(df['Home Alone (1990)'], df['Finding Nemo (2003)'])
+print(ks)
+
 
 #10) There are ratings on movies from several franchises ([‘Star Wars’,‘Harry Potter’,‘The Matrix’,‘Indiana
 #Jones’,‘Jurassic Park’,‘Pirates of the Caribbean’,‘Toy Story’,‘Batman’]) in this dataset. How many of these
