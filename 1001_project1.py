@@ -121,70 +121,70 @@ print(ks)
 #featured in this question to identify the movies that are part of each franchise]
 
 #starwar
-sw1 = df['Star Wars: Episode 1 - The Phantom Menace (1999)']
-sw2 = df['Star Wars: Episode II - Attack of the Clones (2002)']
-sw3 = df['Star Wars: Episode IV - A New Hope (1977)']
-sw4 = df['Star Wars: Episode V - The Empire Strikes Back (1980)']
-sw5 = df['Star Wars: Episode VI - The Return of the Jedi (1983)']
-sw6 = df['Star Wars: Episode VII - The Force Awakens (2015)']
+sw1 = df_movies['Star Wars: Episode 1 - The Phantom Menace (1999)']
+sw2 = df_movies['Star Wars: Episode II - Attack of the Clones (2002)']
+sw3 = df_movies['Star Wars: Episode IV - A New Hope (1977)']
+sw4 = df_movies['Star Wars: Episode V - The Empire Strikes Back (1980)']
+sw5 = df_movies['Star Wars: Episode VI - The Return of the Jedi (1983)']
+sw6 = df_movies['Star Wars: Episode VII - The Force Awakens (2015)']
 
 f1, p1 = stats.f_oneway(sw1, sw2, sw3, sw4, sw5, sw6)
 print(f1, p1)
 
 #harrypotter
-hp1 = df['Harry Potter and the Chamber of Secrets (2002)']
-hp2 = df['Harry Potter and the Deathly Hallows: Part 2 (2011)']
-hp3 = df['Harry Potter and the Goblet of Fire (2005)']
-hp4 = df['Harry Potter and the Sorcerer\'s Stone (2001)']
+hp1 = df_movies['Harry Potter and the Chamber of Secrets (2002)']
+hp2 = df_movies['Harry Potter and the Deathly Hallows: Part 2 (2011)']
+hp3 = df_movies['Harry Potter and the Goblet of Fire (2005)']
+hp4 = df_movies['Harry Potter and the Sorcerer\'s Stone (2001)']
 
 f2, p2 = stats.f_oneway(hp1, hp2, hp3, hp4)
 print(f2, p2)
 
 #matrix
-m1 = df['The Matrix (1999)']
-m2 = df['The Matrix Reloaded (2003)']
-m3 = df['The Matrix Revolutions (2003)']
+m1 = df_movies['The Matrix (1999)']
+m2 = df_movies['The Matrix Reloaded (2003)']
+m3 = df_movies['The Matrix Revolutions (2003)']
 
 f3, p3 = stats.f_oneway(m1, m2, m3)
 print(f3, p3)
 
 #indianajones
-ij1 = df['Indiana Jones and the Kingdom of the Crystal Skull (2008)']
-ij2 = df['Indiana Jones and the Last Crusade (1989)']
-ij3 = df['Indiana Jones and the Raiders of the Lost Ark (1981)']
-ij4 = df['Indiana Jones and the Temple of Doom (1984)']
+ij1 = df_movies['Indiana Jones and the Kingdom of the Crystal Skull (2008)']
+ij2 = df_movies['Indiana Jones and the Last Crusade (1989)']
+ij3 = df_movies['Indiana Jones and the Raiders of the Lost Ark (1981)']
+ij4 = df_movies['Indiana Jones and the Temple of Doom (1984)']
 
 f4, p4 = stats.f_oneway(ij1, ij2, ij3, ij4)
 print(f4, p4)
 
 #jurassicpark
-jp1 = df['Jurassic Park (1993)']
-jp2 = df['Jurassic Park III (2001)']
-jp3 = df['The Lost World: Jurassic Park (1997)']
+jp1 = df_movies['Jurassic Park (1993)']
+jp2 = df_movies['Jurassic Park III (2001)']
+jp3 = df_movies['The Lost World: Jurassic Park (1997)']
 
 f5, p5 = stats.f_oneway(jp1, jp2, jp3)
 print(f5, p5)
 
 #pirates of the carribbean
-pc1 = df['Pirates of the Caribbean: At World\'s End (2007)']
-pc2 = df['Pirates of the Caribbean: Dead Man\'s Chest (2006)']
-pc3 = df['Pirates of the Caribbean: The Curse of the Black Pearl (2003)']
+pc1 = df_movies['Pirates of the Caribbean: At World\'s End (2007)']
+pc2 = df_movies['Pirates of the Caribbean: Dead Man\'s Chest (2006)']
+pc3 = df_movies['Pirates of the Caribbean: The Curse of the Black Pearl (2003)']
 
 f6, p6 = stats.f_oneway(pc1, pc2, pc3)
 print(f6, p6)
 
 #toystory
-ts1 = df['Toy Story (1995)']
-ts2 = df['Toy Story 2 (1999)']
-ts3 = df['Toy Story 3 (2010)']
+ts1 = df_movies['Toy Story (1995)']
+ts2 = df_movies['Toy Story 2 (1999)']
+ts3 = df_movies['Toy Story 3 (2010)']
 
 f7, p7 = stats.f_oneway(ts1, ts2, ts3)
 print(f7, p7)
 
 #batman
-bm1 = df['Batman & Robin (1997)']
-bm2 = df['Batman (1989)']
-bm3 = df['Batman: The Dark Knight (2008)']
+bm1 = df_movies['Batman & Robin (1997)']
+bm2 = df_movies['Batman (1989)']
+bm3 = df_movies['Batman: The Dark Knight (2008)']
 
 f8, p8 = stats.f_oneway(bm1, bm2, bm3)
 print(f8, p8)
